@@ -51,13 +51,13 @@ export default function Voting() {
     return (
         <section className="py-12 shadow-2xl bg-white text-black dark:bg-gray-900 dark:text-white md:px-10 ">
             <div className=" mx-auto px-4">
-                <h2 className="text-4xl font-bold text-center mb-8">Voting</h2>
+                <h2 className="text-4xl font-bold text-center mb-8 text-gray-900 dark:text-white">Voting</h2>
                 {/* Login Toggle */}
                 <div className="flex justify-center mb-6">
                     <Link to="/login">
                         <button
                             onClick={() => setUserLoggedIn(!userLoggedIn)}
-                            className={`px-4 py-2 text-white rounded-lg ${userLoggedIn ? "bg-red-500 hover:bg-red-600" : "bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:brightness-125 duration-300 transition"
+                            className={`px-4 py-2 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 ${userLoggedIn ? "bg-red-500 hover:bg-red-600" : "bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600"
                                 }`}
                         >
                             {userLoggedIn ? "Logout" : "Login"}
@@ -71,31 +71,31 @@ export default function Voting() {
                         return (
                             <div
                                 key={post.id}
-                                className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300"
+                                className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300"
                             >
-                                <h3 className="text-xl font-bold text-gray-800 mb-2">
+                                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                                     {post.title}
                                 </h3>
-                                <p className="text-gray-600 mb-4">{post.content}</p>
+                                <p className="text-gray-700 dark:text-gray-300 mb-4">{post.content}</p>
                                 <div className="flex items-center justify-between">
                                     {/* Voting Buttons */}
                                     <div className="flex items-center space-x-4">
                                         <button
                                             onClick={() => handleVote(post.id, "up")}
-                                            className="text-green-500 hover:text-green-600 text-lg"
+                                            className="text-green-500 hover:text-green-600 dark:text-green-400 dark:hover:text-green-500 text-lg transition-colors"
                                             title="Upvote"
                                         >
                                             ▲
                                         </button>
                                         <button
                                             onClick={() => handleVote(post.id, "down")}
-                                            className="text-red-500 hover:text-red-600 text-lg"
+                                            className="text-red-500 hover:text-red-600 dark:text-red-400 dark:hover:text-red-500 text-lg transition-colors"
                                             title="Downvote"
                                         >
                                             ▼
                                         </button>
                                     </div>
-                                    <span className="text-gray-800 font-semibold">
+                                    <span className="text-gray-900 dark:text-white font-semibold">
                                         Votes: {postVote?.votes || post.votes}
                                     </span>
                                 </div>

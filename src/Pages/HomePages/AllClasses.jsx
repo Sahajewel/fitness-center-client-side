@@ -35,7 +35,7 @@ export default function AllClasses() {
         <title>Home | All Classes</title>
       </Helmet>
 
-      <h1 className="text-center underline text-4xl font-bold mb-8 py-10">
+      <h1 className="text-center underline text-4xl font-bold mb-8 py-10 text-gray-900 dark:text-white">
         All Classes
       </h1>
 
@@ -43,7 +43,7 @@ export default function AllClasses() {
       <div className="flex justify-center mb-6">
         <button
           onClick={handleSort}
-          className="px-4 py-2 text-white bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:brightness-125 duration-300 transition"
+          className="px-4 py-2 text-white bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 duration-300 transition rounded-lg shadow-md hover:shadow-lg"
         >
           Sort by Class Name ({isAscending ? "Ascending" : "Descending"})
         </button>
@@ -54,13 +54,13 @@ export default function AllClasses() {
         {sortedTrainers.map((trainer) => (
           <div
             key={trainer._id}
-            className="border shadow-lg rounded-2xl p-6 hover:shadow-xl transition-shadow duration-300"
+            className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg rounded-2xl p-6 hover:shadow-xl transition-shadow duration-300"
           >
-            <h2 className="text-xl font-bold">Trainer: {trainer.name}</h2>
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white">Trainer: {trainer.name}</h2>
             <div className="mt-4 space-y-2">
-              <p className="text-lg font-bold">Class Name</p>
+              <p className="text-lg font-bold text-gray-900 dark:text-white">Class Name</p>
               {trainer.trainerClasses.map((classes, i) => (
-                <p key={i} className="flex items-center gap-2">
+                <p key={i} className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
                   <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
                   {classes.className}
                 </p>

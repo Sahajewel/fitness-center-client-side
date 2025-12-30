@@ -27,10 +27,10 @@ export default function Balance() {
     ];
     return (
         <div className='shadow-2xl md:px-10 pb-10'>
-             <Helmet>
-             <title>Dashboard | overview</title>
-           </Helmet>
-            <h1 className='text-center py-10  text-4xl font-bold underline'>Total Balance: ${totalPrice}</h1>
+            <Helmet>
+                <title>Dashboard | overview</title>
+            </Helmet>
+            <h1 className='text-center py-10 text-gray-800 dark:text-white  text-4xl font-bold underline'>Total Balance: ${totalPrice}</h1>
             <div className='flex justify-center flex-col '>
                 <div className="overflow-x-auto mb-10">
                     <Table>

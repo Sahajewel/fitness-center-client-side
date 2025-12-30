@@ -42,18 +42,18 @@ const Featured = () => {
 
     return (
         <section className="mt-24 pb-10 shadow-2xl md:px-10 bg-white text-black dark:bg-gray-900 dark:text-white">
-             <h2 className="text-4xl  underline font-bold py-12 mb-12 text-center ">Featured Features</h2>
+             <h2 className="text-4xl underline font-bold py-12 mb-12 text-center text-gray-900 dark:text-white">Featured Features</h2>
             <div className="container mx-auto text-center">
                
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-4">
                     {features.map((feature, index) => (
                         <div 
                             key={index}
-                            className=" p-6 rounded-lg shadow-md hover:shadow-xl transition-all border "
+                            className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700"
                         >
                             <div className="text-4xl mb-4">{feature.icon}</div>
-                            <h3 className="text-2xl font-semibold mb-2">{feature.title}</h3>
-                            <p className="">{feature.description}</p>
+                            <h3 className="text-2xl font-semibold mb-2 text-gray-900 dark:text-white">{feature.title}</h3>
+                            <p className="text-gray-700 dark:text-gray-300">{feature.description}</p>
                         </div>
                     ))}
                 </div>

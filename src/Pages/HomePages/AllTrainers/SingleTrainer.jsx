@@ -1,5 +1,5 @@
 import { Card } from "flowbite-react";
-import {  useLoaderData } from 'react-router-dom'
+import { useLoaderData } from 'react-router-dom'
 
 export default function TrainerDetails() {
     const loader = useLoaderData()
@@ -7,7 +7,7 @@ export default function TrainerDetails() {
     return (
 
         <div className="shadow-2xl bg-white text-black dark:bg-gray-900 dark:text-white mx-auto mb-20 w-10/12 md:px-10">
-            <h1 className='text-center py-10  text-4xl font-bold ' >Trainer Info</h1>
+
             <div className='md:flex justify-center items-center gap-10 p-10'>
                 <div >
 
@@ -32,9 +32,9 @@ export default function TrainerDetails() {
                     </div>
 
                 </div>
-               
+
             </div >
-            
+
         </div>
 
 

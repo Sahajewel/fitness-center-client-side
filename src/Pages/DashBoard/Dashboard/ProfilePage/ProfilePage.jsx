@@ -40,17 +40,17 @@ export default function ProfilePage() {
         }
         const savedUser = JSON.parse(localStorage.getItem('user'));
 
-       
+
         const res = await axiosPublic.put("/users", userInfo)
         console.log(res.data)
-         Swal.fire({
-                    position: "top-end",
-                    icon: "success",
-                    title: "Profile updated",
-                    showConfirmButton: false,
-                    timer: 1500
-                  });
-                  navigate("/dashboard")
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Profile updated",
+            showConfirmButton: false,
+            timer: 1500
+        });
+        navigate("/dashboard")
         if (res.data.modifiedCount > 0) {
             user.displayName = data.name;
             user.photoURL = response.data.data.display_url
@@ -78,16 +78,16 @@ export default function ProfilePage() {
         setEmail('');
     }
     return (
-        <div className='flex flex-col mx-auto items-center justify-center shadow-2xl pb-10'>
-             <Helmet>
-             <title>Dashboard | profile</title>
-           </Helmet>
-            <h1 className='mb-10  underline font-bold text-4xl'>Profile</h1>
+        <div className='flex flex-col  mx-auto items-center justify-center shadow-2xl pb-10'>
+            <Helmet>
+                <title>Dashboard | profile</title>
+            </Helmet>
+            <h1 className='mb-10  underline font-bold text-gray-800 dark:text-white text-4xl'>Profile</h1>
             <div className='shadow-2xl p-10 border'>
-                <h1 className=' text-center mb-3'>Name: {user?.displayName}</h1>
+                <h1 className=' text-center text-gray-800 dark:text-white mb-3'>Name: {user?.displayName}</h1>
                 <img className='h-40 w-40 rounded-full mb-3' src={user?.photoURL} alt="" />
-                <p className='  mb-3'>Email: {user?.email}</p>
-               
+                <p className=' text-gray-800 dark:text-white  mb-3'>Email: {user?.email}</p>
+
                 <div className='w-full  flex justify-center'>
                     <button className='bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-3 hover:brightness-125 duration-300 transition text-white' onClick={() => setOpenModal(true)}>Edit Profile</button>
                 </div>

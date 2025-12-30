@@ -4,18 +4,18 @@ import become from "../../assets/become.webp"
 export default function BeATrainer() {
     return (
         <div>
-            <h1 className='text-center py-10 text-4xl font-bold underline mt-10'>Be A Trainer</h1>
+            <h1 className='text-center py-10 text-4xl font-bold underline mt-10 text-gray-900 dark:text-white'>Be A Trainer</h1>
             <div className="md:flex justify-center items-center md:gap-20 py-20">
                 <div>
                     <img className="w-[400px]" src={become} alt="" />
                 </div>
 
-                <div className="mt-8 bg-gray-100 text-black p-6 rounded-lg text-center">
-                    <h3 className="text-2xl font-semibold">Want to Become a Trainer?</h3>
-                    <p className="mt-4 text-lg">If you're passionate about fitness and want to share your knowledge with others, become a part of our team of trainers!</p>
+                <div className="mt-8 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white p-6 rounded-lg text-center border border-gray-200 dark:border-gray-700">
+                    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Want to Become a Trainer?</h3>
+                    <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">If you're passionate about fitness and want to share your knowledge with others, become a part of our team of trainers!</p>
                     <Link
                         to="/become-a-trainer"
-                        className="mt-6 inline-block bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white   duration-500 font-semibold py-2 px-6 rounded-lg transition hover:brightness-125"
+                        className="mt-6 inline-block bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white duration-500 font-semibold py-2 px-6 rounded-lg transition shadow-md hover:shadow-lg"
                     >
                         Become a Trainer
                     </Link>

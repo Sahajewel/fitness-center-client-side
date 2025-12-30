@@ -38,16 +38,16 @@ export default function AddNewForum() {
             showConfirmButton: false,
             timer: 1500
         });
-       navigate("/dashboard")
+        navigate("/dashboard")
 
     }
     return (
         <div className='shadow-2xl pb-10 md:px-10 p-3'>
-             <Helmet>
-             <title>Dashboard | add-new-forum</title>
-           </Helmet>
-            <h1 className='text-center py-10   text-4xl font-bold underline'>Add A New Forum</h1>
-            <form  onSubmit={handleSubmit(onSubmit)}>
+            <Helmet>
+                <title>Dashboard | add-new-forum</title>
+            </Helmet>
+            <h1 className='text-center py-10   text-4xl font-bold underline text-gray-800 dark:text-white'>Add A New Forum</h1>
+            <form onSubmit={handleSubmit(onSubmit)}>
                 {/* routine and tips */}
                 <div className='md:flex gap-6'>
                     <div className="w-full">

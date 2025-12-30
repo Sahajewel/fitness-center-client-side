@@ -5,9 +5,9 @@ export default function AllNewsLettersSubscriber() {
     const [newsLetter] = UseNewsletter()
     return (
         <div className="bg-white shadow-2xl text-black dark:bg-gray-900 dark:text-white md:px-10 md:pb-10">
-             <Helmet>
-             <title>Dashboard | all-newsletter-subscribers</title>
-           </Helmet>
+            <Helmet>
+                <title>Dashboard | all-newsletter-subscribers</title>
+            </Helmet>
             <h1 className='text-center  underline text-4xl font-bold mb-8 pt-10'>All Newsletter Subscriber</h1>
             <h1 className="mb-5 text-xl  ">Newsletter subscriber: {newsLetter.length}</h1>
             <div className="overflow-x-auto">
